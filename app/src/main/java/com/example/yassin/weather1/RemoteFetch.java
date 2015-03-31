@@ -1,16 +1,15 @@
 package com.example.yassin.weather1;
+import android.content.Context;
+
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.json.JSONObject;
-
-import android.content.Context;
-import android.util.Log;
-
 public class RemoteFetch {
-
+    //
     private static final String OPEN_WEATHER_MAP_API =
             "http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric" ;
 
@@ -20,8 +19,7 @@ public class RemoteFetch {
             HttpURLConnection connection =
                     (HttpURLConnection)url.openConnection();
 
-            connection.addRequestProperty("x-api-key",
-                    context.getString(R.string.open_weather_maps_app_id));
+            connection.addRequestProperty("x-api-key",context.getString(R.string.open_weather_maps_app_id));
 
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(connection.getInputStream()));

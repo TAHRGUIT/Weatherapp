@@ -83,15 +83,6 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true" />
 
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:id="@+id/imageView3"
-                        android:layout_below="@+id/weather_icon"
-                        android:layout_alignLeft="@+id/weather_icon"
-                        android:layout_alignStart="@+id/weather_icon"
-                        android:src="@drawable/celuis" />
-
                     <TextView
                         android:id="@+id/current_temperature_field"
                         android:layout_width="260dp"
@@ -110,43 +101,86 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:id="@+id/imageView4"
-                        android:src="@drawable/celuis" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:id="@+id/imageView5"
-                        android:src="@drawable/celuis" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:id="@+id/imageView6"
-                        android:src="@drawable/celuis" />
-
-                </LinearLayout>
+                android:layout_height="205dp"
+                android:weightSum="1">
 
                 <TextView
                     android:id="@+id/details_field"
-                    android:layout_width="fill_parent"
-                    android:layout_height="170dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textSize="20dp"
                     android:gravity="bottom"
-                    android:textColor="#BDC3C7" />
+                    android:textColor="#BDC3C7"
+                    android:text="aaaaaaaaaa" />
+
+                <TextView
+                    android:id="@+id/Tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7"
+                    android:text="uyhgfd"
+                    android:layout_weight="0.11" />
+
+                <TextView
+                    android:id="@+id/Tx1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7"
+                    android:text="68512"
+                    android:layout_weight="0.11" />
+
+                <TextView
+                    android:id="@+id/Tx2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7"
+                    android:text="68512"
+                    android:layout_weight="0.11" />
+
+                <TextView
+                    android:id="@+id/Tx3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7"
+                    android:text="68512"
+                    android:layout_weight="0.11" />
+
+                <TextView
+                    android:id="@+id/Tx4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7"
+                    android:text="68512"
+                    android:layout_weight="0.11" />
+
+                <TextView
+                    android:id="@+id/Tx5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7"
+                    android:text="68512"
+                    android:layout_weight="0.11" />
 
             </LinearLayout>
 

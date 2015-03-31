@@ -1,12 +1,5 @@
 package com.example.yassin.weather1;
 
-import java.text.DateFormat;
-import java.text.DecimalFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.json.JSONObject;
-
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,9 +8,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONObject;
+
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.util.Date;
+import java.util.Locale;
 
 
 
@@ -28,6 +27,7 @@ public class WeatherFragment extends Fragment {
     TextView detailsField;
     TextView currentTemperatureField;
     TextView weatherIcon;
+    TextView Tex,tx,tx1,tx2,tx3,tx4;
 
     Handler handler;
 
@@ -44,6 +44,12 @@ public class WeatherFragment extends Fragment {
         detailsField = (TextView)rootView.findViewById(R.id.details_field);
         currentTemperatureField = (TextView)rootView.findViewById(R.id.current_temperature_field);
         weatherIcon = (TextView)rootView.findViewById(R.id.weather_icon);
+        Tex=(TextView) rootView.findViewById(R.id.Tx);
+        tx=(TextView)rootView.findViewById(R.id.Tx1);
+        tx1=(TextView)rootView.findViewById(R.id.Tx2);
+        tx2=(TextView)rootView.findViewById(R.id.Tx3);
+        tx3=(TextView)rootView.findViewById(R.id.Tx4);
+        tx4=(TextView)rootView.findViewById(R.id.Tx5);
 
         weatherIcon.setTypeface(weatherFont);
         return rootView;
@@ -90,19 +96,20 @@ public class WeatherFragment extends Fragment {
                     json.getJSONObject("sys").getString("country"));
             JSONObject details = json.getJSONArray("weather").getJSONObject(0);
             JSONObject main = json.getJSONObject("main");
-            detailsField.setText(" "+
-                    details.getString("description").toUpperCase(Locale.US) +
-                            "\n\n" + " Humidity: " + main.getString("humidity") + "%" +
-                            "\n\n" + " Pressure: " + main.getString("pressure") + " hPa");
-
-            DecimalFormat df1 = new DecimalFormat("####");
+            JSONObject wind = json.getJSONObject("wind");
+            JSONObject coord = json.getJSONObject("coord");
+            detailsField.setText(" "+details.getString("description").toUpperCase(Locale.US));
+            Tex.setText(" "+" Humidity: " + main.getString("humidity") + "%");
+            tx.setText(" "+ " Pressure: " + main.getString("pressure") + " hPa");
+            tx1.setText(" "+ " lat: " + coord.getString("lat") + " °");
+            tx2.setText(" "+ " long: " + coord.getString("lon") + " °");
+            tx3.setText(" "+ " Deg: " + wind.getString("deg") + " °");
+            tx4.setText(" "+ " Speed: " + wind.getString("speed") +" Km/h" );
+            DecimalFormat df1 = new DecimalFormat("####°C");
             Double s = main.getDouble("temp");
-            //Double c = s-273;
+            //Double c = s-273
             String St = df1.format(s);
             currentTemperatureField.setText(St);
-
-
-
             DateFormat df = DateFormat.getDateTimeInstance();
             String updatedOn = df.format(new Date(json.getLong("dt")*1000));
             updatedField.setText("Last update: " + updatedOn);
