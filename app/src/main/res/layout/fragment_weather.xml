@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="ah.hathi.simpleweather.WeatherActivity$PlaceholderFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/loc"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/city_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="#BDC3C7" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/updated_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_field"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="#BDC3C7" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/weather_icon"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="55dp"
+                        android:textColor="#BDC3C7"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/current_temperature_field"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:id="@+id/imageView3"
+                        android:layout_below="@+id/weather_icon"
+                        android:layout_alignLeft="@+id/weather_icon"
+                        android:layout_alignStart="@+id/weather_icon"
+                        android:src="@drawable/celuis" />
+
+                    <TextView
+                        android:id="@+id/current_temperature_field"
+                        android:layout_width="260dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="100dp"
+                        android:text="C"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center"
+                        android:textColor="#BDC3C7" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/celuis" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/celuis" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/imageView6"
+                        android:src="@drawable/celuis" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/details_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="170dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:textColor="#BDC3C7" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
